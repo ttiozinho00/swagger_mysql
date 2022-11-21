@@ -1,0 +1,26 @@
+{
+	"development": {
+		"username": "root",
+		"password": "Douglas123@",
+		"database": "swegger_crud",
+		"host": "localhost",
+		"dialect": "mysql",
+		"timezone": "America/campo_grande"
+	},
+	"test": {
+		"username": "root",
+		"password": "Douglas123@",
+		"database": "swegger_crud",
+		"host": "localhost",
+		"dialect": "mysql",
+		"timezone": "America/campo_grande"
+	},
+	"production": {
+		"username": "root",
+		"password": "Douglas123@",
+		"database": "swegger_crud",
+		"host": "localhost",
+		"dialect": "mysql",
+		"timezone": "America/campo_grande"
+	}
+}
