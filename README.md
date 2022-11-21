@@ -1,37 +1,22 @@
-![Alt Text](/docs/titulo.JPG)
 
-# CRUD-NodeJS-Sequelize-Swagger-MySQL
 
-Simple CRUD example with NodeJS, Sequelize, Swagger and MySQL
+## Para executar este projeto
 
-## Technologies:
+- Execute o script localizado em "/docs/crud.sql" para criar o banco de dados no MySQL Workbench ou em outro programa de sua preferência.
 
-- NodeJS Express v4.16.4
-- Sequelize v4.38.0
-- Swagger UI v3.20.1
-- MySQL
-
-## Objective
-
-The objective of this guide is to make a [NodeJS Express](https://expressjs.com/pt-br/) web API connecting with a [MySQL](https://dev.mysql.com/downloads/installer/) database by using the [Sequelize ORM](https://sequelize.org/) (Object-relational mapping). The [Swagger UI](https://swagger.io/tools/swagger-ui/) will be used to test the API.
-
-## To run this project
-
-- Run the script located at "/docs/crud.sql" to create the database on MySQL Workbench or on another program of your preference.
-
-- Install the node modules running the comands below at the root folder:
+- Instale os módulos do nó executando os comandos abaixo na pasta raiz:
 
 ```batch
-    npm install
+    npm install ou yarn install
 ```
 
-- Run the API:
+- inicia a aplicação da API:
 
 ```batch
-    npm run dev
+    npm run dev ou yarn dev
 ```
 
-- Acess the URL:
+- Acesse a URL:
 
 ```batch
     http://localhost:3000
@@ -39,32 +24,32 @@ The objective of this guide is to make a [NodeJS Express](https://expressjs.com/
 
 ![Alt Text](/docs/swagger.JPG)
 
-## How it works
+## Como funciona
 
-The structure of the project is this:
+A estrutura do projeto é essa:
 
 ![Alt Text](/docs/node01.JPG)
 
-The "server.js" file creates a MySQL pool to allow multiple connections:
+ "server.js" arquivo cria um pool MySQL para permitir múltiplas conexões:
 
 ![Alt Text](/docs/node02.JPG)
 
-The "/config/config.json" contains database connections for different environments. They are used by the "/models/index.js" file during the Sequelize initialization:
+O "/config/config.json" contém conexões de banco de dados para diferentes ambientes. Eles são usados pelo "/models/index.js" arquivo durante a inicialização do Sequelize:
 
 ![Alt Text](/docs/node03.JPG)
 
-The "/models" folder contains the Sequelize table models. For example: the "profiles" model.
+O "/models" pasta contém os modelos de tabela Sequelize. Por exemplo: o "profiles" modelo.
 
 ![Alt Text](/docs/node04.JPG)
 
-The "users" model makes reference to the "profiles" model:
+O "users" modelo faz referência ao "profiles" modelo:
 
 ![Alt Text](/docs/node05.JPG)
 
-The "/plugins/transaction.js" file is responsible for making the transaction's commit and rollback:
+O "/plugins/transaction.js" é responsável por fazer o commit e rollback da transação:
 
 ![Alt Text](/docs/node06.JPG)
 
-The "/controllers/users.js" has the GET/POST/PUT/DELETE methods:
+O "/controllers/users.js" hsão os GET/POST/PUT/DELETE metodos:
 
 ![Alt Text](/docs/node07.JPG)
